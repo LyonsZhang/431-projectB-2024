@@ -1,0 +1,35 @@
+{
+  "task1.qmd": {
+    "task1.html": "a57baee5"
+  },
+  "register.qmd": {
+    "register.html": "b24dd979"
+  },
+  "study1a.qmd": {
+    "study1a.html": "a92d868c"
+  },
+  "self_eval.qmd": {
+    "self_eval.html": "52256f72"
+  },
+  "study1c.qmd": {
+    "study1c.html": "d298fec7"
+  },
+  "study1b.qmd": {
+    "study1b.html": "15093d6b"
+  },
+  "index.qmd": {
+    "index.html": "59d8cd7c"
+  },
+  "study2c.qmd": {
+    "study2c.html": "daf92205"
+  },
+  "study2b.qmd": {
+    "study2b.html": "4a1db4f8"
+  },
+  "study2a.qmd": {
+    "study2a.html": "7b9bf85f"
+  },
+  "tipsheet.qmd": {
+    "tipsheet.html": "cc60a1bc"
+  }
+}

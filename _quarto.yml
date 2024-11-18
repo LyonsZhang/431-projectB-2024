@@ -16,6 +16,8 @@ website:
           text: "Using NHANES data"
         - href: data3.qmd  
           text: "Using Something Else"
+        - href: task1.qmd
+          text: "Create Website"
       - href: register.qmd
         text: "Registration"
       - text: "Study 1"

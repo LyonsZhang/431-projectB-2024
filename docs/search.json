@@ -243,5 +243,68 @@
     "title": "Study 2 Sample Report",
     "section": "",
     "text": "A Sample 2 Study Report will be posted soon."
+  },
+  {
+    "objectID": "task1.html",
+    "href": "task1.html",
+    "title": "Task A: Create your own website",
+    "section": "",
+    "text": "Tatchaporn Ongphichetmetha\nAtticus Kenny\n\n\n\nTask A requires you to build a professional website, or augment your current one, if you already have one.\nThis is, we hope, a worthwhile opportunity for you to build your own professional website. Not only will this give you some additional practice coding and using R and R-adjacent tools like Quarto, it’s a low-cost and potentially high-yield method to establish your professional presence online.\nTo complete this task successfully, you must submit a permanent URL from which Dr. Zhang has to be able to open your website and read its contents."
+  },
+  {
+    "objectID": "task1.html#what-is-this",
+    "href": "task1.html#what-is-this",
+    "title": "Task A: Create your own website",
+    "section": "",
+    "text": "Task A requires you to build a professional website, or augment your current one, if you already have one.\nThis is, we hope, a worthwhile opportunity for you to build your own professional website. Not only will this give you some additional practice coding and using R and R-adjacent tools like Quarto, it’s a low-cost and potentially high-yield method to establish your professional presence online.\nTo complete this task successfully, you must submit a permanent URL from which Dr. Zhang has to be able to open your website and read its contents."
+  },
+  {
+    "objectID": "task1.html#the-five-key-elements",
+    "href": "task1.html#the-five-key-elements",
+    "title": "Task A: Create your own website",
+    "section": "The Five Key Elements",
+    "text": "The Five Key Elements\nDr. Zhang will be happy if your site clearly includes at least the following five elements:\n\nA front page including a photo of you or of something relevant to you.\nLinks to your social media presence, if any, and a way for people to get in touch with you via email.\nAn About Me or Welcome section on your front page, which briefly describes what you’re doing now.\nSome information on your Education, Experiences, and/or Projects\nA way to download your CV\n\nA blog is also an appealing way to connect your thoughts with the world, and including non-professional stuff is OK, too, of course."
+  },
+  {
+    "objectID": "task1.html#can-i-use-something-other-than-r-quarto-to-build-my-site",
+    "href": "task1.html#can-i-use-something-other-than-r-quarto-to-build-my-site",
+    "title": "Task A: Create your own website",
+    "section": "Can I use something other than R / Quarto to build my site?",
+    "text": "Can I use something other than R / Quarto to build my site?\nYes, but you’ll receive less credit than a good Quarto site would receive.\nGood options to consider include Owlstown, and Wix, and each offers templates that would work nicely.\nFollow whichever approach is best for you and you feel most comfortable with. The key thing is to commit to making this a part of your life going forward, however you most effectively do that."
+  },
+  {
+    "objectID": "task1.html#what-if-i-already-have-an-active-website",
+    "href": "task1.html#what-if-i-already-have-an-active-website",
+    "title": "Task A: Create your own website",
+    "section": "What if I already have an active website?",
+    "text": "What if I already have an active website?\nIf it includes the five elements listed above, great! You should definitely submit it to me as soon as possible."
+  },
+  {
+    "objectID": "task1.html#should-i-spend-a-lot-of-money-to-have-a-fancy-domain-name",
+    "href": "task1.html#should-i-spend-a-lot-of-money-to-have-a-fancy-domain-name",
+    "title": "Task A: Create your own website",
+    "section": "Should I spend a lot of money to have a fancy domain name?",
+    "text": "Should I spend a lot of money to have a fancy domain name?\nNo. There are many low-cost solutions if you want to register a domain and use it for this purpose. Google Domains can provide you with most available domains for something like $1 per month. I wouldn’t go much above that, and a free name is even better."
+  },
+  {
+    "objectID": "task1.html#will-the-tas-help-me-troubleshoot-my-website",
+    "href": "task1.html#will-the-tas-help-me-troubleshoot-my-website",
+    "title": "Task A: Create your own website",
+    "section": "Will the TAs help me troubleshoot my website?",
+    "text": "Will the TAs help me troubleshoot my website?\nIf they can, sure, but only after anyone else looking for 431 help has had their problem settled. I do not guarantee that we can help fix your website problems."
+  },
+  {
+    "objectID": "task1.html#grading-lab-7",
+    "href": "task1.html#grading-lab-7",
+    "title": "Task A: Create your own website",
+    "section": "Grading Lab 7",
+    "text": "Grading Lab 7\n\nTask A is worth 25 points.\nStudents will receive all 25 points if …\n\ntheir Task A submission is on time, and\ntheir Task A site was built using Quarto, and\ntheir Task A site clearly includes the five key elements listed above, and\ntheir Task A site has no unfixed typos or grammatical issues that Dr. Love notices in his review.\n\nStudents will receive a maximum of 22.5/25 points if their site was built using something other than Quarto, but otherwise meets these standards."
+  },
+  {
+    "objectID": "task1.html#are-there-examples-from-past-students",
+    "href": "task1.html#are-there-examples-from-past-students",
+    "title": "Task A: Create your own website",
+    "section": "Are there examples from past students?",
+    "text": "Are there examples from past students?\nYes. Visit this link for some student websites from people who took 432 this past Spring."
   }
 ]

@@ -1,0 +1,15 @@
+{
+  "hash": "975c0c57dd9fa5a75b4117d95a362f62",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Study 1 Sample Report\"\nauthor: \"431 Staff\"\ndate: last-modified\n---\n\n\n\n\nA Study 1 Sample Report will be posted soon.",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
