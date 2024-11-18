@@ -8,6 +8,9 @@ date-modified: last-modified
 knitr::opts_chunk$set(comment = NA)
 ```
 
+
+- You’ve read sections 11 and 28-29 of [R for Data Science](https://r4ds.hadley.nz/).
+
 # NEW! Completed Websites by Students in this year's class
 
 - [Tatchaporn Ongphichetmetha](https://tatchaporn.github.io/tatchaporn/)
