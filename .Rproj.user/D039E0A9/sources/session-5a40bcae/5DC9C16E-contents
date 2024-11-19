@@ -32,16 +32,16 @@ website:
           text: "Required Study 1 Analyses" 
         - href: study1b.qmd
           text: "Study 1 Report Specifications"
-        - href: study1c.qmd
-          text: "Study 1 Example Report"
+        # - href: study1c.qmd
+        #   text: "Study 1 Example Report"
       - text: "Study 2"
         menu:
         - href: study2a.qmd
           text: "Required Study 2 Analyses" 
         - href: study2b.qmd
           text: "Study 2 Report Specifications"
-        - href: study2c.qmd
-          text: "Study 2 Example Report"
+        # - href: study2c.qmd
+        #   text: "Study 2 Example Report"
       # - href: self_eval.qmd
       #   text: "Self-Evaluation"
       # - href: checklist.qmd
