@@ -200,7 +200,7 @@
     "href": "index.html",
     "title": "431 Project B Instructions",
     "section": "",
-    "text": "What is Project B?\nProject B is the second data science projects you’ll be doing this semester. It involves the completion of two tasks, which you’ll start working on 11-20-2024.\n\nYou will each build a quarto website, add a data analysis blog and a dashboard to your website.\nFinally, you will complete a Self-Evaluation form.\n\n\n\nWhat’s on this Website\n\n\n\n\n\n\nTask A requires you to build a professional website. Bascially, you need to register a GitHub account, download a GitHub desktop to connect local files with files in the GitHub repositories, utilize a quarto website template, edit the quarto files to include your own contents and publish it through GitHub Profile.\nTask B requires you to perform statistical analyses you learned in this semester and show the analyses using quarto dashboard and publish the results in webpage under a navigation menu.\nThe Data: Instructions on getting data for Project B\n\nYou’ll either use data from NHANES, or from some other source.\n\nInstructions for Study 1\n\nYou’ll find information on required Study 1 analyses\nWe also provide detailed Study 1 report specifications\nYou’ll also find a Study 1 example report\n\nInstructions for Study 2\n\nYou’ll find information on required Study 2 analyses\nWe also provide detailed Study 2 report specifications\nYou’ll also find a Study 2 example report\n\nSelf-Evaluation Form for Project B    \n\n\n\n\nProject B Deliverables\n\n\nFinally, you will complete a Self-Evaluation form, by the Project B Portfolio deadline in the Course Calendar.\n\n\n\n\n\nGrading\nProject B will be graded by Dr. Zhang on a scale from 0-100 points.\n\nOn-time successful completion of the website is worth 50 points.\nThe completion of dashboard and blog are worth a combined 50 points.\nLate work on Project B is unacceptable. All deadlines are in the Course Calendar.\n\nDr. Zhang will provide no written feedback on your Project B work. The grading timeline is simply too tight on my end. I apologize in advance.\n\n\nQuestions?\nIf you have questions, let us know about them on Campuswire using the projectB folder, or speak with Dr. Zhang before or after class, or discuss them with the TAs during office hours."
+    "text": "What is Project B?\nProject B is the second data science projects you’ll be doing this semester. It involves the completion of two tasks, which you’ll start working on 11-20-2024.\n\nYou will each build a quarto website, create a dashboard and a blog and add them to your website.\nIn the dashboard, showcase the statistical analyses you applied to the data to address your hypothesis questions.\nIn the blog, explain the process of building the dashboard, the hypotheses you tested, the types of analyses performed, and the results and conclusions you derived.\n\n\n\nWhat’s on this Website\n\n\n\n\n\n\nTask A requires you to build a professional website. Bascially, you need to register a GitHub account, download a GitHub desktop to connect local files with files in the GitHub repositories, utilize a quarto website template, edit the quarto files to include your own contents and publish it through GitHub Profile.\nTask B requires you to perform statistical analyses you learned in this semester and show the analyses using quarto dashboard and publish the results in webpage under a navigation menu.\nI’ve provided you with The Data: Instructions on getting data for Project B\n\nYou’ll either use data from NHANES, or from some other source.\n\nYou don’t need to read Study 1 and Study 2 if you already know the analyses you plan to perform. However, if you’re unsure, you can refer to them for guidance.\nInstructions for Study 1\n\nYou’ll find information on required Study 1 analyses\nWe also provide detailed Study 1 report specifications\nYou’ll also find a Study 1 example report\n\nInstructions for Study 2\n\nYou’ll find information on required Study 2 analyses\nWe also provide detailed Study 2 report specifications\nYou’ll also find a Study 2 example report\n\nSelf-Evaluation Form for Project B    \n\n\n\n\nProject B Deliverables\n\n\nFinally, you will complete a Self-Evaluation form, by the Project B Portfolio deadline in the Course Calendar.\n\n\n\n\n\nGrading\nProject B will be graded by Dr. Zhang on a scale from 0-100 points.\n\nOn-time successful completion of the website is worth 50 points.\nThe completion of dashboard and blog are worth a combined 50 points.\nLate work on Project B is unacceptable. All deadlines are in the Course Calendar.\n\nDr. Zhang will provide no written feedback on your Project B work. The grading timeline is simply too tight on my end. I apologize in advance.\n\n\nQuestions?\nIf you have questions, let us know about them on Campuswire using the projectB folder, or speak with Dr. Zhang before or after class, or discuss them with the TAs during office hours."
   },
   {
     "objectID": "self_eval.html",
@@ -326,7 +326,7 @@
     "href": "task1.html#grading-taks-a",
     "title": "Task A: Create your own website",
     "section": "Grading Taks A",
-    "text": "Grading Taks A\n\nTask A is worth 45 points.\nStudents will receive all 45 points if …\n\ntheir Task A submission is on time, and\ntheir Task A site was built using Quarto, and\ntheir Task A site clearly includes the five key elements listed above, and\ntheir Task A site has no unfixed typos or grammatical issues that Dr. Zhang notices in his review.\n\nStudents will receive a maximum of 40/45 points if their site was built using something other than Quarto, but otherwise meets these standards."
+    "text": "Grading Taks A\n\nTask A is worth 50 points.\nStudents will receive all 50 points if …\n\ntheir Task A submission is on time, and\ntheir Task A site was built using Quarto, and\ntheir Task A site clearly includes the five key elements listed above, and\ntheir Task A site has no unfixed typos or grammatical issues that Dr. Zhang notices in his review.\n\nStudents will receive a maximum of 40/50 points if their site was built using something other than Quarto, but otherwise meets these standards."
   },
   {
     "objectID": "dashboard1.html",
@@ -383,5 +383,33 @@
     "title": "Labor and Delivery Dashboard",
     "section": "Column",
     "text": "Column\n\nld_c |&gt;\n  select(-delivery_method) |&gt;\n  arrange(patient_id) |&gt;\n  datatable(\n    colnames = c(\"ID\", \"Maternal age\", \"Parity\", \"Term\"),\n    options = list(\n      dom = \"lrtip\", \n      paging = TRUE,\n      lengthMenu = c(5, 10, 25),\n      pageLength = 10, \n      scrollY = TRUE\n    ),\n  )"
+  },
+  {
+    "objectID": "task2.html",
+    "href": "task2.html",
+    "title": "Task B: Create a dashboard and blog in your website",
+    "section": "",
+    "text": "Please read through the tutorials for Quarto Dashboards https://quarto.org/docs/dashboards/"
+  },
+  {
+    "objectID": "task2.html#getting-started-with-quarto-dashboard",
+    "href": "task2.html#getting-started-with-quarto-dashboard",
+    "title": "Task B: Create a dashboard and blog in your website",
+    "section": "",
+    "text": "Please read through the tutorials for Quarto Dashboards https://quarto.org/docs/dashboards/"
+  },
+  {
+    "objectID": "task2.html#examples-of-quarto-dashboard-using-r-coding",
+    "href": "task2.html#examples-of-quarto-dashboard-using-r-coding",
+    "title": "Task B: Create a dashboard and blog in your website",
+    "section": "Examples of Quarto Dashboard using R coding",
+    "text": "Examples of Quarto Dashboard using R coding\n\nDashboard Example 1, Labor and Delivery Dashboard\nDashboard Example 2, Palmer Penguins"
+  },
+  {
+    "objectID": "task2.html#the-five-key-elements",
+    "href": "task2.html#the-five-key-elements",
+    "title": "Task B: Create a dashboard and blog in your website",
+    "section": "The Five Key Elements",
+    "text": "The Five Key Elements\nDr. Zhang will be happy if your dashboard clearly includes at least the following five elements:\n\nA front page including a photo of you or of something relevant to you.\nLinks to your social media presence, if any, and a way for people to get in touch with you via email.\nAn About Me or Welcome section on your front page, which briefly describes what you’re doing now.\nSome information on your Education, Experiences, and/or Projects\nA way to download your CV\n\nA blog is also an appealing way to connect your thoughts with the world, and including non-professional stuff is OK, too, of course."
   }
 ]

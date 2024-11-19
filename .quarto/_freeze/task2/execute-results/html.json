@@ -1,0 +1,15 @@
+{
+  "hash": "135994144ca02c304b1a16b7a914c3e5",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Task B: Create a dashboard and blog in your website\"\nauthor: \"Liangliang Zhang, ph.D.\"\ndate: last-modified\n---\n\n\n\n\n## Getting Started with Quarto Dashboard\n\n- Please read through the tutorials for Quarto Dashboards https://quarto.org/docs/dashboards/\n\n## Examples of Quarto Dashboard using R coding\n\n- [Dashboard Example 1](dashboard1.qmd), Labor and Delivery Dashboard\n- [Dashboard Example 2](dashboard1.qmd), Palmer Penguins\n\n## The Five Key Elements\n\nDr. Zhang will be happy if your dashboard clearly includes at least the\nfollowing five elements:\n\n1.  A front page including a photo of you or of something relevant to\n    you.\n2.  Links to your social media presence, if any, and a way for people to\n    get in touch with you via email.\n3.  An About Me or Welcome section on your front page, which briefly\n    describes what you’re doing now.\n4.  Some information on your Education, Experiences, and/or Projects\n5.  A way to download your CV\n\nA blog is also an appealing way to connect your thoughts with the world,\nand including non-professional stuff is OK, too, of course.\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -9,7 +9,9 @@ website:
       - href: index.html
         text: "Home"
       - href: task1.qmd
-        text: "Create Website"
+        text: "Task A: Website"
+      - href: task2.qmd
+        text: "Task B: Dashboard and Blog"
       - href: dashboard1.qmd
         text: "Dashboard Example 1"
       - href: dashboard2.qmd

@@ -8,8 +8,10 @@ date: last-modified
 
 Project B is the second data science projects you'll be doing this semester. It involves the completion of two tasks, which you’ll start working on 11-20-2024.
 
-1. You will each build a quarto website, add a data analysis blog and a dashboard to your website.
-2. Finally, you will complete a Self-Evaluation form.
+1. You will each build a quarto website, create a dashboard and a blog and add them to your website.
+2. In the dashboard, showcase the statistical analyses you applied to the data to address your hypothesis questions.
+3. In the blog, explain the process of building the dashboard, the hypotheses you tested, the types of analyses performed, and the results and conclusions you derived.
+
 
 # What's on this Website
 
@@ -20,9 +22,9 @@ Project B is the second data science projects you'll be doing this semester. It 
 <!--       - provide options for when you can give your oral presentation, and whether you prefer to do so in person or via Zoom -->
 - Task A requires you to build a professional website. Bascially, you need to register a GitHub account, download a GitHub desktop to connect local files with files in the GitHub repositories, utilize a quarto website template, edit the quarto files to include your own contents and publish it through GitHub Profile.
 - Task B requires you to perform statistical analyses you learned in this semester and show the analyses using quarto dashboard and publish the results in webpage under a navigation menu. 
-- [The Data](data1.qmd): Instructions on getting data for Project B
+- I've provided you with [The Data](data1.qmd): Instructions on getting data for Project B
     - You'll either use [data from NHANES](data2.qmd), or from [some other source](data3.qmd).
-
+- You don’t need to read Study 1 and Study 2 if you already know the analyses you plan to perform. However, if you’re unsure, you can refer to them for guidance.
 - Instructions for [Study 1](study1a.qmd)
     - You'll find information on [required Study 1 analyses](study1a.qmd)
     - We also provide detailed [Study 1 report specifications](study1b.qmd)
