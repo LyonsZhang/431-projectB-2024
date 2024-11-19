@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Liangliang Zhang, Ph.D.">
+<meta name="author" content="Liangliang Zhang">
 
-<title>431 Project B - Task A: Create your own website</title>
+<title>431 Project B - Palmer Penguins</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -40,6 +74,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-dashboard/quarto-dashboard.js"></script>
+<script src="site_libs/quarto-dashboard/stickythead.js"></script>
+<script src="site_libs/quarto-dashboard/datatables.min.js" kdttablesentinel="true"></script>
+<script src="site_libs/quarto-dashboard/pdfmake.min.js" kdttablesentinel="true"></script>
+<script src="site_libs/quarto-dashboard/vfs_fonts.js" kdttablesentinel="true"></script>
+<script src="site_libs/quarto-dashboard/web-components.js" type="module"></script>
+<script src="site_libs/quarto-dashboard/components.js"></script>
+<link href="site_libs/quarto-dashboard/datatables.min.css" rel="stylesheet" kdttablesentinel="true">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,11 +109,14 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
 </head>
 
-<body class="nav-fixed">
+<body class="quarto-dashboard nav-fixed dashboard-fill dashboard-sidebar fullcontent">
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -93,15 +138,15 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./task1.html" aria-current="page"> 
+    <a class="nav-link" href="./task1.html"> 
 <span class="menu-text">Create Website</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./dashboard.qmd"> 
+    <a class="nav-link" href="./dashboard.html"> 
 <span class="menu-text">Dashboard Example 1</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./dashboard2.html"> 
+    <a class="nav-link active" href="./dashboard2.html" aria-current="page"> 
 <span class="menu-text">Dashboard Example 2</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -183,177 +228,166 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-</header>
+<header id="quarto-dashboard-header">
+<nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
+  <div class="navbar-container container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+
+
+    <div class="navbar-brand-container">       
+
+      <div class="navbar-title">
+        <div class="navbar-title-text"><a href="#">Palmer Penguins</a></div>
+        
+        <div class="navbar-author">Liangliang Zhang</div>
+      </div>
+    </div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-plot" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#plot" data-scrolling="false" href="#plot" aria-controls="plot" aria-selected="true"><span class="nav-link-text">Plot</span></a></li><li class="nav-item" role="presentation"><a id="tab-data" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#data" data-scrolling="false" href="#data" aria-controls="data" aria-selected="false"><span class="nav-link-text">Data</span></a></li></ul></div></div>
+</nav>
+</header></header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill quarto-dashboard-pages dashboard-sidebar-container">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#getting-started-with-quarto" id="toc-getting-started-with-quarto" class="nav-link active" data-scroll-target="#getting-started-with-quarto">Getting Started with Quarto</a></li>
-  <li><a href="#new-completed-websites-by-students-in-this-years-class" id="toc-new-completed-websites-by-students-in-this-years-class" class="nav-link" data-scroll-target="#new-completed-websites-by-students-in-this-years-class">NEW! Completed Websites by Students in this year’s class</a></li>
-  <li><a href="#what-is-this" id="toc-what-is-this" class="nav-link" data-scroll-target="#what-is-this">What is this?</a></li>
-  <li><a href="#submitting-your-website" id="toc-submitting-your-website" class="nav-link" data-scroll-target="#submitting-your-website">Submitting your Website</a></li>
-  <li><a href="#instructions-and-guidance" id="toc-instructions-and-guidance" class="nav-link" data-scroll-target="#instructions-and-guidance">Instructions and Guidance</a>
-  <ul class="collapse">
-  <li><a href="#the-five-key-elements" id="toc-the-five-key-elements" class="nav-link" data-scroll-target="#the-five-key-elements">The Five Key Elements</a></li>
-  </ul></li>
-  <li><a href="#using-quarto-to-build-the-site" id="toc-using-quarto-to-build-the-site" class="nav-link" data-scroll-target="#using-quarto-to-build-the-site">Using Quarto to Build the Site</a>
-  <ul class="collapse">
-  <li><a href="#can-i-use-something-other-than-r-quarto-to-build-my-site" id="toc-can-i-use-something-other-than-r-quarto-to-build-my-site" class="nav-link" data-scroll-target="#can-i-use-something-other-than-r-quarto-to-build-my-site">Can I use something other than R / Quarto to build my site?</a></li>
-  <li><a href="#what-if-i-already-have-an-active-website" id="toc-what-if-i-already-have-an-active-website" class="nav-link" data-scroll-target="#what-if-i-already-have-an-active-website">What if I already have an active website?</a></li>
-  <li><a href="#should-i-spend-a-lot-of-money-to-have-a-fancy-domain-name" id="toc-should-i-spend-a-lot-of-money-to-have-a-fancy-domain-name" class="nav-link" data-scroll-target="#should-i-spend-a-lot-of-money-to-have-a-fancy-domain-name">Should I spend a lot of money to have a fancy domain name?</a></li>
-  <li><a href="#will-the-tas-help-me-troubleshoot-my-website" id="toc-will-the-tas-help-me-troubleshoot-my-website" class="nav-link" data-scroll-target="#will-the-tas-help-me-troubleshoot-my-website">Will the TAs help me troubleshoot my website?</a></li>
-  <li><a href="#grading-taks-a" id="toc-grading-taks-a" class="nav-link" data-scroll-target="#grading-taks-a">Grading Taks A</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Task A: Create your own website</h1>
+<div class="cell hidden bslib-grid-item html-fill-item">
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="9" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 8;"><span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/penguins.csv"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">csv</span>({ <span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span> })</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>filtered <span class="op">=</span> data<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(penguin) {</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> bill_length_min <span class="op">&lt;</span> penguin<span class="op">.</span><span class="at">bill_length_mm</span> <span class="op">&amp;&amp;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>         islands<span class="op">.</span><span class="fu">includes</span>(penguin<span class="op">.</span><span class="at">island</span>)<span class="op">;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="bslib-sidebar-layout html-fill-item html-fill-container" data-bslib-sidebar-open="desktop" data-bslib-sidebar-init="true" data-bslib-sidebar-border="false" data-bslib-sidebar-border-radius="false"><div class="main html-fill-container html-fill-item"><div class="sidebar-content html-fill-item html-fill-container">
+<div class="tab-content bslib-grid html-fill-item html-fill-container" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div id="plot" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-plot">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb3" data-startfrom="40" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 39;"><span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">rectY</span>(filtered<span class="op">,</span> </span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>  Plot<span class="op">.</span><span class="fu">binX</span>(</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>    {<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> </span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>    {<span class="dt">x</span><span class="op">:</span> <span class="st">"body_mass_g"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"species"</span><span class="op">,</span> <span class="dt">thresholds</span><span class="op">:</span> <span class="dv">20</span>}</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>    <span class="dt">facet</span><span class="op">:</span> {</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>      <span class="dt">data</span><span class="op">:</span> filtered<span class="op">,</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"sex"</span><span class="op">,</span></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"species"</span><span class="op">,</span></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>      <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">80</span></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">frame</span>()<span class="op">,</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div id="ojs-cell-3" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div><div id="data" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-data">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb4" data-startfrom="62" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 61;"><span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(filtered)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div id="ojs-cell-4" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+
+
+<div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+</div></div><aside id="bslib-sidebar-1" class="sidebar html-fill-container html-fill-item"><div class="html-fill-container html-fill-item">
+<p><img src="data/penguins.png" class="img-fluid" style="width:80.0%"></p>
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="23" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 22;"><span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>viewof bill_length_min <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>(</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">32</span><span class="op">,</span> <span class="dv">50</span>]<span class="op">,</span> </span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">value</span><span class="op">:</span> <span class="dv">35</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Bill length (min):"</span>}</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>viewof islands <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">checkbox</span>(</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Torgersen"</span><span class="op">,</span> <span class="st">"Biscoe"</span><span class="op">,</span> <span class="st">"Dream"</span>]<span class="op">,</span> </span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">value</span><span class="op">:</span> [<span class="st">"Torgersen"</span><span class="op">,</span> <span class="st">"Biscoe"</span><span class="op">,</span> <span class="st">"Dream"</span>]<span class="op">,</span> </span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Islands:"</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<p>A simple example based on Allison Horst’s <a href="https://%20allisonhorst.github.io/palmerpenguins/">Palmer Penguins</a> dataset.</p>
+</div></aside>
+<button class="collapse-toggle" type="button" title="Toggle sidebar" aria-expanded="true" aria-controls="bslib-sidebar-1">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-chevron-left collapse-icon" style="fill:currentColor;" aria-hidden="true" role="img">
+      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
+    </svg>
+</button>
+<script data-bslib-sidebar-init="">
+bslib.Sidebar.initCollapsibleAll()
+</script>
 </div>
 
 
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Liangliang Zhang, Ph.D. </p>
-          </div>
-  </div>
-    
-  
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024-11-18</p>
-    </div>
-  </div>
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="getting-started-with-quarto" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started-with-quarto">Getting Started with Quarto</h2>
-<ul>
-<li>Please read sections 11 and 28-29 of <a href="https://r4ds.hadley.nz/">R for Data Science</a>.</li>
-</ul>
-<hr>
-</section>
-<section id="new-completed-websites-by-students-in-this-years-class" class="level2">
-<h2 class="anchored" data-anchor-id="new-completed-websites-by-students-in-this-years-class">NEW! Completed Websites by Students in this year’s class</h2>
-<ul>
-<li><a href="https://atticus-kenny.github.io/atticuskenny/">Atticus Kenny</a></li>
-<li><a href="https://bxb576.github.io/bxb576/">Brooke Bhattacharya</a></li>
-<li><a href="https://dzjian1.github.io/">Dana Jian</a></li>
-<li><a href="https://www.isaaczz.com/">Isaac Zeng</a></li>
-<li><a href="https://jefflambe.quarto.pub/jeff-lambe/">Jeff Lambe</a></li>
-<li><a href="https://jiyu3048.github.io/jiyu3048/">JiaWei Yu</a></li>
-<li><a href="https://mahsa-sheikh.github.io/Mahsa-Sheikh/">Mahsa Sheikholeslamian</a></li>
-<li><a href="https://nmehta08.github.io/nmehta08/">Nihit Mehta</a></li>
-<li><a href="https://tatchaporn.github.io/tatchaporn/">Tatchaporn Ongphichetmetha</a></li>
-<li><a href="https://vmachira.github.io/">Vedasree Machiraju</a></li>
-</ul>
-<hr>
-</section>
-<section id="what-is-this" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-this">What is this?</h2>
-<p>Task A requires you to build a professional website, or augment your current one, if you already have one.</p>
-<p>This is, we hope, a worthwhile opportunity for you to build your own professional website. Not only will this give you some additional practice coding and using R and R-adjacent tools like Quarto, it’s a low-cost and potentially high-yield method to establish your professional presence online.</p>
-<p>To complete this task successfully, you must submit a permanent URL from which Dr.&nbsp;Zhang has to be able to open your website and read its contents.</p>
-</section>
-<section id="submitting-your-website" class="level1">
-<h1>Submitting your Website</h1>
-<p>Submit a link to your website to Dr.&nbsp;Zhang (lxz716@case.edu) and cc’ed TAs Monika Strah (mxs1667@case.edu) and Alex Olejko (awo14@case.edu) in an email with the subject line <strong>My Website</strong> by the deadline specified in the Course Calendar. In the body of your email, briefly tell me how you created the site (Quarto, or something else.)</p>
-</section>
-<section id="instructions-and-guidance" class="level1">
-<h1>Instructions and Guidance</h1>
-<p>We want you to build a professional looking website that will be useful to you. The content is (mostly) up to you, but it’s worth considering using this opportunity to craft your online presence.</p>
-<section id="the-five-key-elements" class="level2">
-<h2 class="anchored" data-anchor-id="the-five-key-elements">The Five Key Elements</h2>
-<p>Dr.&nbsp;Zhang will be happy if your site clearly includes at least the following five elements:</p>
-<ol type="1">
-<li>A front page including a photo of you or of something relevant to you.</li>
-<li>Links to your social media presence, if any, and a way for people to get in touch with you via email.</li>
-<li>An About Me or Welcome section on your front page, which briefly describes what you’re doing now.</li>
-<li>Some information on your Education, Experiences, and/or Projects</li>
-<li>A way to download your CV</li>
-</ol>
-<p>A blog is also an appealing way to connect your thoughts with the world, and including non-professional stuff is OK, too, of course.</p>
-</section>
-</section>
-<section id="using-quarto-to-build-the-site" class="level1">
-<h1>Using Quarto to Build the Site</h1>
-<p>Here are some resources that we think might be useful to you. If you find others that are helpful, please share them with us.</p>
-<ul>
-<li>Marvin Schmitt provides a full tutorial and template at <a href="https://www.marvinschmitt.com/blog/website-tutorial-quarto/">Create Your Website with Quarto</a>. The template <a href="https://marvinschmitt.github.io/quarto-website-template/">shown here</a>, for example, gives you a great example of what I’m looking for. This is the most common tool people who’ve completed this have mentioned to me.</li>
-<li>Quarto’s general guide to <a href="https://quarto.org/docs/websites/">Creating a Website</a> may be helpful.</li>
-<li>The Quarto website shows you how to create a blog website within R Studio <a href="https://quarto.org/docs/websites/website-blog.html">in some detail here</a>.</li>
-<li>Sam Csik has useful thoughts on <a href="https://ucsb-meds.github.io/creating-quarto-websites/">Creating your personal website using Quarto</a></li>
-<li>We found Drew Dimmery’s <a href="https://ddimmery.com/posts/quarto-website/">Quarto for an Academic Website</a> interesting and useful.</li>
-<li><a href="https://andreaczhang.github.io/qtwAcademic/articles/template_personal.html">Chi Zhang’s site</a> provides a nice template for a personal site.</li>
-<li>The Quarto website shows you how to create a blog website within R Studio <a href="https://quarto.org/docs/websites/website-blog.html">in some detail here</a>.</li>
-<li>Beatriz Milz’ <a href="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/">Creating a blog with Quarto in 10 Steps</a></li>
-<li>Albert Rapp’s <a href="https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide.html">The Ultimate Guide to Starting a Quarto Blog</a></li>
-<li>CrumpLab gives us <a href="https://www.youtube.com/watch?v=YoKjBcuUP0s">Blogging with Quarto: A 10 minute getting started tutorial</a> (about 10 minutes)</li>
-<li>Isabella Velásquez at RStudio has a YouTube video called <a href="https://www.youtube.com/watch?v=CVcvXfRyfE0">Building a Blog with Quarto</a> (just over an hour)</li>
-<li>Thomas Mock shows you how to <a href="https://www.youtube.com/watch?v=t8qtcDyCRFA">Create &amp; Publish a Quarto Blog on Quarto Pub in 100 Seconds</a></li>
-<li>Joshua French has a playlist at YouTube of nine short videos that walk you through <a href="https://www.youtube.com/playlist?list=PLkrJrLs7xfbXcEKhTCKRSr2VXH4yiBeXo">Creating Websites with Quarto and Github</a></li>
-</ul>
-<section id="can-i-use-something-other-than-r-quarto-to-build-my-site" class="level2">
-<h2 class="anchored" data-anchor-id="can-i-use-something-other-than-r-quarto-to-build-my-site">Can I use something other than R / Quarto to build my site?</h2>
-<p>Yes, but you’ll receive less credit than a good Quarto site would receive. So I don’t suggest you to use something else.</p>
-<p>Good options to consider include <a href="https://www.owlstown.com/">Owlstown</a>, and <a href="https://www.wix.com/">Wix</a>, and each offers templates that would work nicely.</p>
-<p>Follow whichever approach is best for you and you feel most comfortable with. The key thing is to commit to making this a part of your life going forward, however you most effectively do that.</p>
-</section>
-<section id="what-if-i-already-have-an-active-website" class="level2">
-<h2 class="anchored" data-anchor-id="what-if-i-already-have-an-active-website">What if I already have an active website?</h2>
-<p>If it includes the five elements listed above, great! You should definitely submit it to me as soon as possible.</p>
-</section>
-<section id="should-i-spend-a-lot-of-money-to-have-a-fancy-domain-name" class="level2">
-<h2 class="anchored" data-anchor-id="should-i-spend-a-lot-of-money-to-have-a-fancy-domain-name">Should I spend a lot of money to have a fancy domain name?</h2>
-<p>No.&nbsp;There are many low-cost solutions if you want to register a domain and use it for this purpose. Google Domains can provide you with most available domains for something like $1 per month. I wouldn’t go much above that, and a free name is even better.</p>
-</section>
-<section id="will-the-tas-help-me-troubleshoot-my-website" class="level2">
-<h2 class="anchored" data-anchor-id="will-the-tas-help-me-troubleshoot-my-website">Will the TAs help me troubleshoot my website?</h2>
-<p>If they can, sure, but only after anyone else looking for 431 help has had their problem settled. I do not guarantee that we can help fix your website problems.</p>
-</section>
-<section id="grading-taks-a" class="level2">
-<h2 class="anchored" data-anchor-id="grading-taks-a">Grading Taks A</h2>
-<ul>
-<li>Task A is worth 45 points.</li>
-<li>Students will receive all 45 points if …
-<ul>
-<li>their Task A submission is on time, and</li>
-<li>their Task A site was built using Quarto, and</li>
-<li>their Task A site clearly includes <a href="#the-five-key-elements">the five key elements listed above</a>, and</li>
-<li>their Task A site has no unfixed typos or grammatical issues that Dr.&nbsp;Zhang notices in his review.</li>
-</ul></li>
-<li>Students will receive a maximum of 40/45 points if their site was built using something other than Quarto, but otherwise meets these standards.</li>
-</ul>
-<!-- ## Are there examples from past students? -->
-<!-- Yes. Visit [this -->
-<!-- link](https://github.com/THOMASELOVE/432-classes-2024/tree/main/lab8#approved-lab-8-submissions-so-far) -->
-<!-- for some student websites from people who took 432 this past Spring. -->
-
-
-</section>
-</section>
-
-</main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxuZGF0YSA9IEZpbGVBdHRhY2htZW50KFwiZGF0YS9wZW5ndWlucy5jc3ZcIilcbiAgLmNzdih7IHR5cGVkOiB0cnVlIH0pXG5cbmZpbHRlcmVkID0gZGF0YS5maWx0ZXIoZnVuY3Rpb24ocGVuZ3Vpbikge1xuICByZXR1cm4gYmlsbF9sZW5ndGhfbWluIDwgcGVuZ3Vpbi5iaWxsX2xlbmd0aF9tbSAmJlxuICAgICAgICAgaXNsYW5kcy5pbmNsdWRlcyhwZW5ndWluLmlzbGFuZCk7XG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIGJpbGxfbGVuZ3RoX21pbiA9IElucHV0cy5yYW5nZShcbiAgWzMyLCA1MF0sIFxuICB7dmFsdWU6IDM1LCBzdGVwOiAxLCBsYWJlbDogXCJCaWxsIGxlbmd0aCAobWluKTpcIn1cbilcbnZpZXdvZiBpc2xhbmRzID0gSW5wdXRzLmNoZWNrYm94KFxuICBbXCJUb3JnZXJzZW5cIiwgXCJCaXNjb2VcIiwgXCJEcmVhbVwiXSwgXG4gIHsgdmFsdWU6IFtcIlRvcmdlcnNlblwiLCBcIkJpc2NvZVwiLCBcIkRyZWFtXCJdLCBcbiAgICBsYWJlbDogXCJJc2xhbmRzOlwiXG4gIH1cbilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucmVjdFkoZmlsdGVyZWQsIFxuICBQbG90LmJpblgoXG4gICAge3k6IFwiY291bnRcIn0sIFxuICAgIHt4OiBcImJvZHlfbWFzc19nXCIsIGZpbGw6IFwic3BlY2llc1wiLCB0aHJlc2hvbGRzOiAyMH1cbiAgKSlcbiAgLnBsb3Qoe1xuICAgIGZhY2V0OiB7XG4gICAgICBkYXRhOiBmaWx0ZXJlZCxcbiAgICAgIHg6IFwic2V4XCIsXG4gICAgICB5OiBcInNwZWNpZXNcIixcbiAgICAgIG1hcmdpblJpZ2h0OiA4MFxuICAgIH0sXG4gICAgbWFya3M6IFtcbiAgICAgIFBsb3QuZnJhbWUoKSxcbiAgICBdXG4gIH1cbilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IklucHV0cy50YWJsZShmaWx0ZXJlZClcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnYmlsbF9sZW5ndGhfbWluJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2lzbGFuZHMnKSJ9XX0=
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -449,13 +483,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
-          // target, if specified
-          link.setAttribute("target", "_blank");
-          if (link.getAttribute("rel") === null) {
-            link.setAttribute("rel", "noopener");
-          }
-          // default icon
-          link.classList.add("external");
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -772,6 +799,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 </div> <!-- /content -->
 
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (_event) {
+  if (window.bslib.Card) {
+    window.bslib.Card.initializeAllCards();
+  }
+}); 
+</script>
+  
 
 
 

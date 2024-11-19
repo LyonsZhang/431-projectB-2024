@@ -11,7 +11,9 @@ website:
       - href: task1.qmd
         text: "Create Website"
       - href: dashboard.qmd
-        text: "Dashboards"
+        text: "Dashboard Example 1"
+      - href: dashboard2.qmd
+        text: "Dashboard Example 2"
       - text: "The Data"
         menu: 
         - href: data1.qmd
