@@ -1,6 +1,6 @@
 ---
 title: "Palmer Penguins"
-author: "Liangliang Zhang"
+author: "Cobblepot Analytics"
 format: dashboard
 ---
 ```{ojs}
