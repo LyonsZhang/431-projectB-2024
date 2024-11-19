@@ -1,0 +1,17 @@
+{
+  "hash": "262a5fc4c829ac8e9accb2fe09f81cf5",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Ohio Health Trends Dashboard\"\nformat: \n  html:\n    theme: flatly\n    code-tools: true\n    self-contained: true\nfilters: [\"shiny\"]\nexecute:\n  echo: false\n---\n\n",
+    "supporting": [
+      "dash_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

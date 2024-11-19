@@ -1,0 +1,11 @@
+"0","# Run Shiny app
+shinyApp(ui, server)
+"
+"2","
+Listening on http://127.0.0.1:7187
+"
+"2","Warning:"
+"2"," Failed to fit group -1.
+Caused by error:
+! object 'x2' not found
+"

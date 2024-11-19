@@ -1,0 +1,89 @@
+---
+title: "Ohio Health Trends Dashboard"
+format: 
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 2
+    code-fold: true
+    code-tools: true
+    self-contained: true
+engine: knitr
+filters: ["shiny"]
+---
+
+# Introduction
+
+Welcome to the Ohio Health Trends Dashboard! This dashboard provides interactive visualizations and analysis of health trends in Ohio, utilizing public health datasets.
+
+```{r setup, include=FALSE}
+# Load necessary libraries
+library(shiny)
+library(ggplot2)
+library(plotly)
+library(dplyr)
+ui <- fluidPage(
+  titlePanel("Ohio Health Trends Interactive Analysis"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      selectInput("variable", "Choose a Health Metric:",
+                  choices = c("Obesity Rate" = "obesity_rate",
+                              "Smoking Rate" = "smoking_rate",
+                              "Physical Inactivity" = "physical_inactivity")),
+      sliderInput("year_range", "Select Year Range:",
+                  min = 2000, max = 2023, value = c(2010, 2020), step = 1),
+      checkboxInput("show_trend", "Show Trend Line", value = TRUE)
+    ),
+    mainPanel(
+      plotlyOutput("health_trend_plot"),
+      tableOutput("data_summary")
+    )
+  )
+)
+
+server <- function(input, output) {
+  # Simulated dataset for illustration
+  health_data <- reactive({
+    data.frame(
+      year = 2000:2023,
+      obesity_rate = runif(24, 20, 40),
+      smoking_rate = runif(24, 15, 30),
+      physical_inactivity = runif(24, 10, 25)
+    ) %>%
+      filter(year >= input$year_range[1], year <= input$year_range[2])
+  })
+  
+  output$health_trend_plot <- renderPlotly({
+    data <- health_data()
+    
+    p <- ggplot(data, aes_string(x = "year", y = input$variable)) +
+      geom_line(color = "blue") +
+      geom_point(color = "red") +
+      labs(title = "Health Trends in Ohio",
+           x = "Year",
+           y = input$variable,
+           caption = "Source: Simulated Data") +
+      theme_minimal()
+    
+    if (input$show_trend) {
+      p <- p + geom_smooth(method = "loess", se = FALSE, color = "darkgreen")
+    }
+    
+    ggplotly(p)
+  })
+  
+  output$data_summary <- renderTable({
+    data <- health_data()
+    summary_stats <- data %>%
+      summarise(
+        Min = min(get(input$variable)),
+        Max = max(get(input$variable)),
+        Mean = mean(get(input$variable))
+      )
+    summary_stats
+  })
+}
+
+shinyApp(ui, server)
+```

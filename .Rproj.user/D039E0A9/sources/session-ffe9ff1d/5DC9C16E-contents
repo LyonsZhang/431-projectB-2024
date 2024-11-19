@@ -10,6 +10,8 @@ website:
         text: "Home"
       - href: task1.qmd
         text: "Create Website"
+      - href: <iframe width = "1200" height="700" src = "dashboards/example_dashboard.html"></iframe>
+        text: "Dashboards"
       - text: "The Data"
         menu: 
         - href: data1.qmd
