@@ -10,13 +10,14 @@ knitr::opts_chunk$set(comment = NA)
 
 ## Getting Started with Quarto Dashboard
 
-- Please read through the tutorials for Quarto Dashboards https://quarto.org/docs/dashboards/
+- Please read through the tutorials for Quarto Dashboards [https://quarto.org/docs/dashboards/](https://quarto.org/docs/dashboards/)
 
 ## Examples of Quarto Dashboard using R coding
 
 - [Dashboard Example 1](dashboard1.qmd), Labor and Delivery Dashboard. You can download the [quarto file](dashboard1.qmd).
 - [Dashboard Example 2](dashboard2.qmd), Palmer Penguins.
 You can download the [quota file](dashboard2.qmd).
+  - The Palmer Penguins dashboard provides an engaging and interactive       exploration of data about three penguin species—Adélie, Chinstrap,       and Gentoo—collected from the Palmer Archipelago in Antarctica. This     dashboard features clean and visually appealing charts, allowing         users to analyze key variables such as species, body mass, flipper       length, bill dimensions, and habitat islands. Using interactive          visualizations like scatter plots and bar charts, users can              dynamically filter the data by species or islands to uncover patterns     and trends in penguin traits. The dashboard showcases the versatility     of Quarto in creating interactive, data-driven applications that         enable users to explore relationships and gain insights from             real-world datasets intuitively.
 
 ## The Five Key Elements
 
