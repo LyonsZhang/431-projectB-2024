@@ -1,0 +1,8 @@
+[1,"==> quarto preview index.qmd --to html --no-watch-inputs --no-browse\n\n"]
+[1,"\u001B[1mpandoc \u001B[22m\n  to: html\n  output-file: index.html\n  standalone: true\n  title-prefix: 431 Project B\n  section-divs: true\n  html-math-method: mathjax\n  wrap: none\n  default-image-extension: png\n  toc: true\n  \n\u001B[1mmetadata\u001B[22m\n  document-css: false\n  link-citations: true\n  lang: en\n  editor: source\n  theme: simplex\n  date-format: iso\n  title: 431 Project B Instructions\n  author: 'Liangliang Zhang, Ph.D.'\n  date: last-modified\n  \n"]
+[1,"\u001B[33mWARNING: Unable to resolve link target: dashboard.qmd\u001B[39m\nOutput created: docs/index.html\n\n\u001B[1m\u001B[34mPreparing to preview\u001B[39m\u001B[22m\n"]
+[1,"\u001B[33mWARNING: The file /Users/lxz716/Documents/GitHub/431-projectB-2024/dashboard1.qmd contains a theme property which is being ignored. Website projects do not support per document themes since all pages within a website share the website's theme.\u001B[39m\n"]
+[1,"\n"]
+[1,"\u001B[32mWatching files for changes\u001B[39m\n\u001B[32mBrowse at \u001B[39m\u001B[4m\u001B[32mhttp://localhost:4841/\u001B[39m\u001B[24m\n"]
+[1,"\u001B[33mWARNING: Unable to resolve link target: dashboard.qmd\u001B[39m\n"]
+[1,"\u001B[32mGET: /\u001B[39m\n"]
