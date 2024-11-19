@@ -12,7 +12,9 @@
     "properties": {
         "rmdVisualMode": "false",
         "source_window_id": "",
-        "Source": "Source"
+        "Source": "Source",
+        "cursorPosition": "24,0",
+        "scrollLine": "22"
     },
     "folds": "",
     "lastKnownWriteTime": 1730216744,

@@ -14,8 +14,9 @@ knitr::opts_chunk$set(comment = NA)
 
 ## Examples of Quarto Dashboard using R coding
 
-- [Dashboard Example 1](dashboard1.qmd), Labor and Delivery Dashboard
-- [Dashboard Example 2](dashboard1.qmd), Palmer Penguins
+- [Dashboard Example 1](dashboard1.qmd), Labor and Delivery Dashboard. You can download the [quarto file](dashboard1.qmd).
+- [Dashboard Example 2](dashboard2.qmd), Palmer Penguins.
+You can download the [quota file](dashboard2.qmd).
 
 ## The Five Key Elements
 
