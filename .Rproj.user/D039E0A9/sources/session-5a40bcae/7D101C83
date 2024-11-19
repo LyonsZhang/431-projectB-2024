@@ -1,27 +1,25 @@
 {
-    "id": "353470E7",
-    "path": "~/Documents/GitHub/431-projectB-2024/index.qmd",
-    "project_path": "index.qmd",
+    "id": "7D101C83",
+    "path": "~/Documents/GitHub/431-projectB-2024/checklist.qmd",
+    "project_path": "checklist.qmd",
     "type": "quarto_markdown",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1731955736957.0,
+    "created": 1732038926656.0,
     "source_on_save": false,
-    "relative_order": 3,
+    "relative_order": 10,
     "properties": {
         "rmdVisualMode": "false",
         "source_window_id": "",
-        "Source": "Source",
-        "cursorPosition": "52,20",
-        "scrollLine": "49"
+        "Source": "Source"
     },
     "folds": "",
-    "lastKnownWriteTime": 1732038601,
+    "lastKnownWriteTime": 1730216744,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1732038601974,
+    "last_content_update": 1730216744,
     "read_only": false,
     "read_only_alternatives": []
 }
