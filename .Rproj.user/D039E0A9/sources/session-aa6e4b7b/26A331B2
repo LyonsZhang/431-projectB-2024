@@ -1,18 +1,20 @@
 {
-    "id": "7D101C83",
-    "path": "~/Documents/GitHub/431-projectB-2024/checklist.qmd",
-    "project_path": "checklist.qmd",
+    "id": "26A331B2",
+    "path": "~/Documents/GitHub/431-projectB-2024/data3.qmd",
+    "project_path": "data3.qmd",
     "type": "quarto_markdown",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1732038926656.0,
+    "created": 1732039286680.0,
     "source_on_save": false,
-    "relative_order": 10,
+    "relative_order": 18,
     "properties": {
         "rmdVisualMode": "false",
         "source_window_id": "",
-        "Source": "Source"
+        "Source": "Source",
+        "cursorPosition": "24,0",
+        "scrollLine": "0"
     },
     "folds": "",
     "lastKnownWriteTime": 1730216744,
