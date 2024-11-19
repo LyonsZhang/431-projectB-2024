@@ -3,7 +3,7 @@
     "path": "~/Documents/GitHub/431-projectB-2024/data2.qmd",
     "project_path": "data2.qmd",
     "type": "quarto_markdown",
-    "hash": "674931475",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1732039282816.0,
@@ -12,7 +12,9 @@
     "properties": {
         "rmdVisualMode": "false",
         "source_window_id": "",
-        "Source": "Source"
+        "Source": "Source",
+        "cursorPosition": "8,35",
+        "scrollLine": "0"
     },
     "folds": "",
     "lastKnownWriteTime": 1730216744,
