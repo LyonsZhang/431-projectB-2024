@@ -3,7 +3,7 @@
     "path": "~/Documents/GitHub/431-projectB-2024/_quarto.yml",
     "project_path": "_quarto.yml",
     "type": "yaml",
-    "hash": "1883529111",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1731955083920.0,
@@ -12,8 +12,8 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "12,24",
-        "scrollLine": "9"
+        "cursorPosition": "8,22",
+        "scrollLine": "7"
     },
     "folds": "",
     "lastKnownWriteTime": 1732033089,
