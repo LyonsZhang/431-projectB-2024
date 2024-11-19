@@ -8,13 +8,25 @@ date-modified: last-modified
 knitr::opts_chunk$set(comment = NA)
 ```
 
+## Getting Started with Quarto
+- Please read sections 11 and 28-29 of [R for Data Science](https://r4ds.hadley.nz/).
 
-- You’ve read sections 11 and 28-29 of [R for Data Science](https://r4ds.hadley.nz/).
+----
 
-# NEW! Completed Websites by Students in this year's class
+## NEW! Completed Websites by Students in this year's class
 
-- [Tatchaporn Ongphichetmetha](https://tatchaporn.github.io/tatchaporn/)
 - [Atticus Kenny](https://atticus-kenny.github.io/atticuskenny/)
+- [Brooke Bhattacharya](https://bxb576.github.io/bxb576/)
+- [Dana Jian](https://dzjian1.github.io/)
+- [Isaac Zeng](https://www.isaaczz.com/)
+- [Jeff Lambe](https://jefflambe.quarto.pub/jeff-lambe/)
+- [JiaWei Yu](https://jiyu3048.github.io/jiyu3048/)
+- [Mahsa Sheikholeslamian](https://mahsa-sheikh.github.io/Mahsa-Sheikh/)
+- [Nihit Mehta](https://nmehta08.github.io/nmehta08/)
+- [Tatchaporn Ongphichetmetha](https://tatchaporn.github.io/tatchaporn/)
+- [Vedasree Machiraju](https://vmachira.github.io/)
+
+----
 
 ## What is this?
 
@@ -108,7 +120,7 @@ find others that are helpful, please share them with us.
 ## Can I use something other than R / Quarto to build my site?
 
 Yes, but you’ll receive less credit than a good Quarto site would
-receive.
+receive. So I don't suggest you to use something else.
 
 Good options to consider include [Owlstown](https://www.owlstown.com/),
 and [Wix](https://www.wix.com/), and each offers templates that would
@@ -137,19 +149,19 @@ If they can, sure, but only after anyone else looking for 431 help has
 had their problem settled. I do not guarantee that we can help fix your
 website problems.
 
-## Grading Lab 7
+## Grading Taks A
 
-- Task A is worth 25 points.
+- Task A is worth 45 points.
 - Students will receive all 25 points if ...
     - their Task A  submission is on time, and
     - their Task A site was built using Quarto, and
     - their Task A site clearly includes [the five key elements listed above](#the-five-key-elements), and
-    - their Task A site has no unfixed typos or grammatical issues that Dr. Love notices in his review.
-- Students will receive a maximum of 22.5/25 points if their site was built using something other than Quarto, but otherwise meets these standards.
+    - their Task A site has no unfixed typos or grammatical issues that Dr. Zhang notices in his review.
+- Students will receive a maximum of 40/45 points if their site was built using something other than Quarto, but otherwise meets these standards.
 
 
-## Are there examples from past students?
+<!-- ## Are there examples from past students? -->
 
-Yes. Visit [this
-link](https://github.com/THOMASELOVE/432-classes-2024/tree/main/lab8#approved-lab-8-submissions-so-far)
-for some student websites from people who took 432 this past Spring.
+<!-- Yes. Visit [this -->
+<!-- link](https://github.com/THOMASELOVE/432-classes-2024/tree/main/lab8#approved-lab-8-submissions-so-far) -->
+<!-- for some student websites from people who took 432 this past Spring. -->

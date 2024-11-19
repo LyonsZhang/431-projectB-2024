@@ -249,14 +249,14 @@
     "href": "task1.html",
     "title": "Task A: Create your own website",
     "section": "",
-    "text": "Tatchaporn Ongphichetmetha\nAtticus Kenny\n\n\n\nTask A requires you to build a professional website, or augment your current one, if you already have one.\nThis is, we hope, a worthwhile opportunity for you to build your own professional website. Not only will this give you some additional practice coding and using R and R-adjacent tools like Quarto, it’s a low-cost and potentially high-yield method to establish your professional presence online.\nTo complete this task successfully, you must submit a permanent URL from which Dr. Zhang has to be able to open your website and read its contents."
+    "text": "Please read sections 11 and 28-29 of R for Data Science."
   },
   {
     "objectID": "task1.html#what-is-this",
     "href": "task1.html#what-is-this",
     "title": "Task A: Create your own website",
-    "section": "",
-    "text": "Task A requires you to build a professional website, or augment your current one, if you already have one.\nThis is, we hope, a worthwhile opportunity for you to build your own professional website. Not only will this give you some additional practice coding and using R and R-adjacent tools like Quarto, it’s a low-cost and potentially high-yield method to establish your professional presence online.\nTo complete this task successfully, you must submit a permanent URL from which Dr. Zhang has to be able to open your website and read its contents."
+    "section": "What is this?",
+    "text": "What is this?\nTask A requires you to build a professional website, or augment your current one, if you already have one.\nThis is, we hope, a worthwhile opportunity for you to build your own professional website. Not only will this give you some additional practice coding and using R and R-adjacent tools like Quarto, it’s a low-cost and potentially high-yield method to establish your professional presence online.\nTo complete this task successfully, you must submit a permanent URL from which Dr. Zhang has to be able to open your website and read its contents."
   },
   {
     "objectID": "task1.html#the-five-key-elements",
@@ -270,7 +270,7 @@
     "href": "task1.html#can-i-use-something-other-than-r-quarto-to-build-my-site",
     "title": "Task A: Create your own website",
     "section": "Can I use something other than R / Quarto to build my site?",
-    "text": "Can I use something other than R / Quarto to build my site?\nYes, but you’ll receive less credit than a good Quarto site would receive.\nGood options to consider include Owlstown, and Wix, and each offers templates that would work nicely.\nFollow whichever approach is best for you and you feel most comfortable with. The key thing is to commit to making this a part of your life going forward, however you most effectively do that."
+    "text": "Can I use something other than R / Quarto to build my site?\nYes, but you’ll receive less credit than a good Quarto site would receive. So I don’t suggest you to use something else.\nGood options to consider include Owlstown, and Wix, and each offers templates that would work nicely.\nFollow whichever approach is best for you and you feel most comfortable with. The key thing is to commit to making this a part of your life going forward, however you most effectively do that."
   },
   {
     "objectID": "task1.html#what-if-i-already-have-an-active-website",
@@ -306,5 +306,26 @@
     "title": "Task A: Create your own website",
     "section": "Are there examples from past students?",
     "text": "Are there examples from past students?\nYes. Visit this link for some student websites from people who took 432 this past Spring."
+  },
+  {
+    "objectID": "task1.html#getting-started-with-quarto",
+    "href": "task1.html#getting-started-with-quarto",
+    "title": "Task A: Create your own website",
+    "section": "",
+    "text": "Please read sections 11 and 28-29 of R for Data Science."
+  },
+  {
+    "objectID": "task1.html#new-completed-websites-by-students-in-this-years-class",
+    "href": "task1.html#new-completed-websites-by-students-in-this-years-class",
+    "title": "Task A: Create your own website",
+    "section": "NEW! Completed Websites by Students in this year’s class",
+    "text": "NEW! Completed Websites by Students in this year’s class\n\nAtticus Kenny\nBrooke Bhattacharya\nDana Jian\nIsaac Zeng\nJeff Lambe\nJiaWei Yu\nMahsa Sheikholeslamian\nNihit Mehta\nTatchaporn Ongphichetmetha\nVedasree Machiraju"
+  },
+  {
+    "objectID": "task1.html#grading-taks-a",
+    "href": "task1.html#grading-taks-a",
+    "title": "Task A: Create your own website",
+    "section": "Grading Taks A",
+    "text": "Grading Taks A\n\nTask A is worth 45 points.\nStudents will receive all 25 points if …\n\ntheir Task A submission is on time, and\ntheir Task A site was built using Quarto, and\ntheir Task A site clearly includes the five key elements listed above, and\ntheir Task A site has no unfixed typos or grammatical issues that Dr. Zhang notices in his review.\n\nStudents will receive a maximum of 40/45 points if their site was built using something other than Quarto, but otherwise meets these standards."
   }
 ]
