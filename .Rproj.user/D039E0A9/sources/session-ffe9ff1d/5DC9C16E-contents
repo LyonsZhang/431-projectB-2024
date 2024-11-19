@@ -10,7 +10,7 @@ website:
         text: "Home"
       - href: task1.qmd
         text: "Create Website"
-      - href: dashboard.html
+      - href: dashboard.qmd
         text: "Dashboards"
       - text: "The Data"
         menu: 
