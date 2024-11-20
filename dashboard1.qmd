@@ -1,13 +1,14 @@
 ---
 title: "Labor and Delivery Dashboard"
-format: 
+format:
   dashboard:
-    nav-buttons: [github]
-    github: https://github.com/mine-cetinkaya-rundel/ld-dashboard
+   nav-buttons: [github]
+   github: https://github.com/mine-cetinkaya-rundel/ld-dashboard
+   fig-width: 10
+   fig-asp: 0.3
+   fig.show: true
 logo: data/logo.png
-theme: [sandstone, theme/custom.scss]
-fig-width: 10
-fig-asp: 0.3
+theme: [theme/custom.scss]
 params:
   month: "October"
   year: "2023"
@@ -28,7 +29,7 @@ library(readxl)
 library(scales)
 library(DT)
 library(gt)
-theme_set(theme_minimal(base_size = 24, base_family = "Atkinson Hyperlegible"))
+theme_set(theme_minimal(base_size = 24, base_family = "sans"))
 ```
 
 ```{r}
@@ -220,7 +221,7 @@ ld |>
 
 ld |>
   count(parity, delivery_method) |>
-  ggplot(aes(x = n, y = fct_rev(parity), fill = delivery_method)) +
+  ggplot(aes(x = n, y = fct_rev(parity), fill = fct(delivery_method))) +
   geom_col(position = "fill", color = "white") +
   scale_fill_manual(
     values = c("#ae8b2d", "#0e2635"),

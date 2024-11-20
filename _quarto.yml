@@ -57,11 +57,12 @@ website:
 
 format:
   html:
-    theme: simplex
+    theme: sandstone
     date-format: iso
     toc: true
     link-external-icon: true
     link-external-newwindow: true
+    embed-resources: true
 
 editor: source
 
