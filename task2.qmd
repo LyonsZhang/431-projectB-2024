@@ -69,6 +69,15 @@ Dr. Zhang will be happy if your dashboard clearly includes at least the followin
 
 ## Grading Task B
 
+- Task B is worth 45 points.
+- Students will receive all 45 points if ...
+    - their Task B dashboard was built using Quarto, and
+    - their Task B dashboard clearly includes [the five key elements listed above](#the-five-key-elements), and
+    - their Task B Blog was built using Quarto, and
+    - their Task B Blog has no unfixed typos or grammatical issues that Dr. Zhang notices in his review.
+
+## Dashboard Recommendations
+
 1. Content and Analysis (30%)
 Clear and accurate presentation of the data.
 Appropriate application of statistical methods and analyses.
