@@ -5,3 +5,8 @@
 [1,"\n"]
 [1,"\u001B[32mWatching files for changes\u001B[39m\n\u001B[32mBrowse at \u001B[39m\u001B[4m\u001B[32mhttp://localhost:4676/\u001B[39m\u001B[24m\n"]
 [1,"\u001B[32mGET: /\u001B[39m\n"]
+[1,"\u001B[32mGET: /task2.html\u001B[39m\n"]
+[1,"\u001B[32mGET: /dashboard2.html\u001B[39m\n"]
+[1,"\u001B[33mWARN: Unable to determine GitHub repository for the `github` nav-button. Is this directory a GitHub repository?\u001B[39m\n"]
+[1,"\u001B[32mGET: /dashboard1.html\u001B[39m\n"]
+[1,"\u001B[32mGET: /task1.html\u001B[39m\n"]
