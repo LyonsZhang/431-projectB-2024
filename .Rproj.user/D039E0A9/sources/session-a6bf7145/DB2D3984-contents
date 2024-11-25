@@ -1,0 +1,111 @@
+---
+title: "Task B: Create a dashboard and blog in your website"
+author: "Liangliang Zhang, ph.D."
+date: last-modified
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
+
+## Getting Started with Quarto Dashboard
+
+- Please read through the tutorials for Quarto Dashboards [https://quarto.org/docs/dashboards/](https://quarto.org/docs/dashboards/)
+
+## Data Development and Analyses
+
+1. Understand the Data and Define Hypotheses.
+Begin by familiarizing yourself with the dataset and formulating hypothesis-driven questions to guide your analysis.
+
+2. Identify Key Variables and Samples.
+Select the target datasets, focusing on the variables and samples most relevant to your hypotheses and objectives.
+
+3. Develop an Analysis Plan
+Outline a clear plan for your analyses, detailing the methods and statistical approaches you will use. Execute your analyses systematically.
+
+I have provided you with [The Data](data1.qmd), which includes instructions for accessing data for Project B. You can either use [data from NHANES](data2.qmd) or obtain it from [another source](data3.qmd). If you already know the analyses you plan to perform, there’s no need to review [Study 1](study1a.qmd) and [Study 2](study2a.qmd). However, if you’re unsure, these studies can serve as helpful references.
+
+For [Study 1](study1b.qmd), you’ll find detailed instructions on the required analyses and the report specifications to follow. Similarly, for [Study 2](study2b.qmd), we provide guidance on the required analyses and detailed report specifications to ensure you have everything you need.
+
+## Create and Publish a Quarto Dashboard 
+
+- Build Your Dashboard from Scratch.
+    - Following the tutorials, develop your Quarto dashboard incrementally and integrate your statistical analyses and visualizations directly into the file as you progress.
+
+- Customize a Quarto Template
+    - Utilize Dashboard Quarto files from online resources and tailor them to your needs. Replace the existing content, adapt the provided layouts and functions, and integrate your own analyses and results.
+    
+- Embed the Quarto dashboard files into your website folder. You may need to iterate by rerunning the files, uploading them to GitHub, and checking whether the website displays correctly. Your GitHub reposotory might consist of many quarto files, you might need to rerun each of them.
+
+## Examples of Quarto Dashboard using R coding
+
+- [Dashboard Example 1](dashboard1.qmd), Labor and Delivery Dashboard. You can access and download the associated [quarto file](https://drive.google.com/drive/folders/1B0wjjgn2CWImqQajEAEhuiOvIgv3W8uj?usp=share_link). 
+  - The Labor and Delivery Dashboard provides a static yet comprehensive summary of labor and delivery data, focusing on key metrics such as maternal age, delivery methods, and infant weight. Using clear and visually appealing charts, the dashboard presents data in a structured manner, allowing for straightforward interpretation of trends and patterns. For example, bar charts and tables are used to display the distribution of delivery methods and infant outcomes.   This dashboard is an informative tool for understanding labor trends  and maternal-infant health outcomes, offering a concise overview of   the data for healthcare professionals and researchers. While not      interactive, its design ensures that the information is accessible and easy to interpret.
+- [Dashboard Example 2](dashboard2.qmd), Palmer Penguins.
+You can download the [quota file](https://drive.google.com/drive/folders/165vmzYKQXTsxwssOp4T-QWBlnyf5pajU?usp=share_link).
+  - The Palmer Penguins dashboard provides an engaging and interactive  exploration of data about three penguin species—Adélie, Chinstrap,    and Gentoo—collected from the Palmer Archipelago in Antarctica. This  dashboard features clean and visually appealing charts, allowing    users to analyze key variables such as species, body mass, flipper    length, bill dimensions, and habitat islands. Using interactive       visualizations like scatter plots and bar charts, users can           dynamically filter the data by species or islands to uncover patterns and trends in penguin traits. The dashboard showcases the versatility of Quarto in creating interactive, data-driven applications that    enable users to explore relationships and gain insights from        real-world datasets intuitively.
+- You can embed the dashboard quarto files in your website folder and edit it to display your own analyses. 
+
+## The Five Key Elements
+
+Dr. Zhang will be happy if your dashboard clearly includes at least the following five elements:
+
+1. Purposeful Design: Focused objectives with clear KPIs tailored to the audience.
+
+2. Effective Visualizations: Data presented through appropriate and easy-to-interpret charts and graphs.
+
+3. User-Friendly Layout: Intuitive structure with consistent design and interactive features.
+
+4. Accurate Data: Real-time or relevant data updates with clear timestamps.
+
+5. Accessibility: Responsive design, cross-device compatibility, and easy navigation.
+
+
+## Create and Publish a Blog
+
+- Create a Quarto file and begin drafting a report to introduce your dashboard.
+- Explain the process of building the dashboard, the hypotheses you tested, the types of analyses performed, and the results and conclusions you derived.
+- A blog is also an appealing way to connect your thoughts with the world, and including non-professional stuff is OK, too, of course.
+
+## Grading Task B
+
+- Task B is worth 45 points.
+- Students will receive all 45 points if ...
+    - their Task B dashboard was built using Quarto, and
+    - their Task B dashboard clearly includes [the five key elements listed above](#the-five-key-elements), and
+    - their Task B Blog was built using Quarto, and
+    - their Task B Blog has no unfixed typos or grammatical issues that Dr. Zhang notices in his review.
+
+## Dashboard Recommendations
+
+1. Content and Analysis (30%)
+Clear and accurate presentation of the data.
+Appropriate application of statistical methods and analyses.
+Logical interpretation and explanation of the results.
+Hypotheses and conclusions are supported by the data.
+
+2. Dashboard Design and Usability (25%)
+The dashboard layout is intuitive, well-organized, and visually appealing.
+Key information is easy to locate and understand.
+Appropriate use of visualizations (e.g., plots, charts) to effectively communicate insights.
+Interactive features (if included) function properly and enhance the user experience.
+
+3. Code Quality and Documentation (20%)
+Code is clean, well-organized, and follows consistent formatting.
+Proper use of comments to explain key sections of the code.
+Variables and functions are named meaningfully.
+No redundant or unnecessary code.
+
+4. Integration and Functionality (15%)
+The Quarto dashboard functions as intended when deployed (e.g., on GitHub Pages).
+All required components (e.g., data, analyses, visualizations) are successfully integrated into the file.
+Dashboard updates dynamically to reflect the underlying data or analysis changes.
+
+5. Report and Explanation (10%)
+A written report accompanies the dashboard, explaining its purpose, construction process, and key insights.
+The report provides a clear explanation of the hypotheses, analyses, and results.
+The connection between the dashboard and the report is evident and well-articulated.
+This rubric ensures a comprehensive evaluation of both the technical and conceptual aspects of the Quarto dashboard project.
+
+
+
